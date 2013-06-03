@@ -6,18 +6,18 @@ library to run commands.
 Most of the scripts in this repository make use of `pywingo`, so you'll need to 
 have that installed. It's on PyPI, so it can be installed with:
 
-  pip2 install pywingo
+    pip2 install pywingo
 
 Note that some scripts may have other dependencies. Please refer to their 
 individual `README` files for the specifics.
 
 Finally, you can manage your scripts with `wingo-contrib`:
 
-  go get github.com/wingowm/wingo-contrib
+    go get github.com/wingowm/wingo-contrib
 
 And use it, for example:
 
-  wingo-contrib install newproject
+    wingo-contrib install newproject
 
 All scripts are installed in `$XDG_CONFIG_HOME/wingo/scripts`, which is usually 
 at `~/.config/wingo/scripts`.
