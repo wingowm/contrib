@@ -16,5 +16,5 @@ Then type in the desired project name.
 
 Dependencies
 ============
-pywingo
+* pywingo
 

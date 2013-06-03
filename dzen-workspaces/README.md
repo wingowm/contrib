@@ -18,6 +18,6 @@ The formatting options can be changed in
 
 Dependencies
 ============
-pywingo
-dzen2
+* pywingo
+* dzen2
 
