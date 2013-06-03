@@ -55,4 +55,9 @@ to include `wingo` or `wingo-cmd`. This list may also include the names of
 other scripts.
 ```
 
+You may also include a configuration file named `your-script-name.cfg`. If 
+you're using `pywingo`, then it is convenient to use the `ini` format 
+compatible with Python's 
+[ConfigParser](http://docs.python.org/2.7/library/configparser.html#module-ConfigParser), 
+but you're free to use your own format.
 
