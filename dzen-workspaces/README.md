@@ -9,11 +9,11 @@ Example
 =======
 In your `Autostart` hook:
 
-  startup := Shell "dzen2 -dock | ~/.config/wingo/scripts/dzen-workspaces/dzen-workspaces"
+    startup := Shell "dzen2 -dock | ~/.config/wingo/scripts/dzen-workspaces/dzen-workspaces"
 
 The formatting options can be changed in
 
-  ~/.config/wingo/scripts/dzen-workspaces/dzen-workspaces.cfg
+    ~/.config/wingo/scripts/dzen-workspaces/dzen-workspaces.cfg
 
 
 Dependencies
