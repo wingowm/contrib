@@ -9,7 +9,6 @@ W = pywingo.Wingo()
 cfg = W.LoadConfig()
 markup = {}
 for k in ('current', 'visible', 'hidden', 'empty'):
-
     markup[k] = cfg.get('fmt', k)
 
 @W.bind('AddedWorkspace')
