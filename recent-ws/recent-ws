@@ -53,9 +53,6 @@ def cvw(s):
     visible = now_visible
     prev = cur
     cur = now_ws
-    print >> sys.stderr, "ChangedVisibleWorkspace: ",
-    print >> sys.stderr, "prev = %s, cur = %s, " % (prev, cur),
-    print >> sys.stderr, "visible = [" + " ".join(visible) + "]"
 
     set_root_property("_WINGO_recent_ws", prev)
 
