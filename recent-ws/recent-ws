@@ -8,31 +8,9 @@
 import sys
 
 import pywingo
-import Xlib.display
 
-disp = None
-root = None
-
-def get_display():
-    global disp, root
-    if disp is None:
-	disp = Xlib.display.Display()
-    if root is None:
-	root = disp.screen().root
-
-def set_root_property(prop, val):
-    global disp, root
-    try:
-	get_display()
-	root.change_property(disp.intern_atom("%s" % prop),
-			     disp.intern_atom("UTF8_STRING"), 8, val)
-	disp.sync()
-    except:
-	pass
-
-
-prev = None
-cur  = None
+prev = ""
+cur  = ""
 visible = []
 W = pywingo.Wingo()
 
@@ -54,6 +32,6 @@ def cvw(s):
     prev = cur
     cur = now_ws
 
-    set_root_property("_WINGO_recent_ws", prev)
+    W.TagSet(0, "recent_ws", prev)
 
 W.loop()

@@ -40,8 +40,7 @@ Dependencies
 
 The script requires
 
-* pywingo
-* python-xlib
+* pywingo (>= 0.0.11)
 
 
 Details
@@ -57,7 +56,7 @@ keep track with some global state.
 `recent-ws-switch` needs a way to look up the most recent workspace
 when the users wants to go there.  Thus, `recent-ws` stores the
 most recent workspace as a property of the root window in X called
-`_WINGO_recent_ws`.  The `recent-ws-switch` script retrieves that
+`_WINGO_TAG_recent_ws`.  The `recent-ws-switch` script retrieves that
 property.
 
 Ideally, there would be a way to call into the long-running pywingo

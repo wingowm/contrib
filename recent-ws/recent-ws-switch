@@ -8,27 +8,6 @@
 import sys
 import argparse
 import pywingo
-import Xlib.display
-
-disp = None
-root = None
-
-def get_display():
-    global disp, root
-    if disp is None:
-	disp = Xlib.display.Display()
-    if root is None:
-	root = disp.screen().root
-
-def get_root_property(prop):
-    global disp, root
-    try:
-	get_display()
-	val = root.get_full_property(disp.intern_atom("%s" % prop),
-				     disp.intern_atom("UTF8_STRING")).value
-	return val
-    except:
-	return ""
 
 # Handle command-line
 parser = argparse.ArgumentParser()
@@ -39,7 +18,7 @@ parser.add_argument("-g", "--greedy", action="store_true",
 args = parser.parse_args()
 
 W = pywingo.Wingo()
-recent_ws = get_root_property("_WINGO_recent_ws")
+recent_ws = W.TagGet(0, "recent_ws")
 
 if args.with_client:
     if args.greedy:
